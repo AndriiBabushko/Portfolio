@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round:regular);
+body {
+  font-family: "Valera Round" "Times New Roman", Times, serif;
+}
+
+.header .row {
+  background: url("/Landings/ToyStore/SRC/header_bg.png");
+  background-size: contain;
+  color: white;
+}
+.header .row .about {
+  margin-left: 200px;
+  padding-left: 0;
+}
+.header .row .about div:nth-child(2) {
+  margin-left: 55px;
+}
+.header .row .images {
+  margin-right: 200px;
+}
+.header .row .images a img {
+  height: 20px;
+}
+
+.navigation .container-fluid {
+  padding: 0;
+}
+.navigation .container-fluid > a {
+  margin-left: 200px;
+}
+.navigation .container-fluid .cart {
+  margin-right: 200px;
+}
+.navigation .container-fluid .cart a {
+  text-decoration: none;
+}
+.navigation .container-fluid .cart a img {
+  height: 25px;
+}
+.navigation .container-fluid .cart .cart-collections {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: #A5C926;
+  border-radius: 100%;
+}
+
+.header-bg {
+  background: url("/Landings/ToyStore/SRC/baby_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-bg .hello {
+  width: 570px;
+  height: 308px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-bg .hello > div {
+  margin-bottom: 15px;
+  color: #A5C926;
+}
+.header-bg .hello .h1 {
+  width: 416px;
+  text-align: center;
+  font-size: 39px;
+  color: black;
+}
+.header-bg .hello input {
+  background-color: #A5C926;
+  border-radius: 25px;
+  border: 1px solid #92af2a;
+  color: white;
+  height: 48px;
+  width: 153px;
+  opacity: 100%;
+}
+.header-bg .hello input:hover {
+  opacity: 90%;
+}

@@ -1,0 +1,44 @@
+$success-colors: #5cb85c, #a0d6a0, #48a548
+$info-colors: #5bc0de, #9cd9eb, #2badd4
+$warning-colors: #f0ad4e, #f5c684, #dd8013
+$danger-colors: #d9534f, #e79290, #c32f2a
+$alert-names: "success", "info", "warning", "danger"
+
+*
+    margin: 0
+    padding: 0
+
+.alert
+    margin: 0 5px 10px 5px
+    padding: 5px
+    border-width: 1px
+    border-style: solid
+    border-radius: 10px
+    height: 40px
+    width: 350px
+
+@for $i from 1 through 4
+    .alert-#{nth($alert-names, $i)}
+        @if $i == 1
+            border-color: nth($success-colors, 1)
+            background-color: nth($success-colors, 2)
+            color: nth($success-colors, 3)
+        @if $i == 2
+            border-color: nth($info-colors, 1)
+            background-color: nth($info-colors, 2)
+            color: nth($info-colors, 3)
+        @if $i == 3
+            border-color: nth($warning-colors, 1)
+            background-color: nth($warning-colors, 2)
+            color: nth($warning-colors, 3)
+        @if $i == 4
+            border-color: nth($danger-colors, 1)
+            background-color: nth($danger-colors, 2)
+            color: nth($danger-colors, 3)
+
+.container
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center

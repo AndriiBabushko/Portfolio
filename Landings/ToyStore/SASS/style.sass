@@ -1,0 +1,84 @@
+$main-color: #A5C926
+$margin-left-right: 200px
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round:regular)
+
+// *
+//     outline: 1px solid red
+// .container-fluid
+//     outline: 2px solid green
+
+body
+    font-family: 'Valera Round' 'Times New Roman', Times, serif
+
+.header
+    .row
+        background: url('/Landings/ToyStore/SRC/header_bg.png')
+        background-size: contain
+        color: white
+        .about
+            margin-left: $margin-left-right
+            padding-left: 0
+            div
+                &:nth-child(2)
+                    margin-left: 55px
+        .images
+            margin-right: $margin-left-right
+            a
+                img
+                    height: 20px
+
+.navigation
+    .container-fluid
+        padding: 0
+        >a
+            margin-left: $margin-left-right
+        .cart
+            margin-right: $margin-left-right
+            a
+                text-decoration: none
+                img
+                    height: 25px
+            .cart-collections
+                text-align: center
+                width: 25px
+                height: 25px
+                background-color: $main-color
+                border-radius: 100%
+
+.header-bg
+    background: url('/Landings/ToyStore/SRC/baby_bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    height: 90.5vh
+    display: flex
+    justify-content: center
+    align-items: center
+    .hello
+        width: 570px
+        height: 308px
+        background-color: white
+        border-radius: 15px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        >div
+            margin-bottom: 15px 
+            color: $main-color
+        .h1
+            width: 416px
+            text-align: center
+            font-size: 39px
+            color: black    
+        input
+            background-color: $main-color
+            border-radius: 25px
+            border: 1px solid #92af2a
+            color: white
+            height: 48px
+            width: 153px
+            opacity: 100%
+            &:hover
+                opacity: 90%
+
