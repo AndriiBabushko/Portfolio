@@ -1,0 +1,217 @@
+$basic_text_font_size: 12px
+$main_section: 700px
+$main_color: #bbbcc9
+
+@mixin input_button()
+    width: 170px
+    height: 40px
+    font-size: $basic_text_font_size * 1.3
+    background-color: #c24040
+    color: white
+    border: 0
+    opacity: 90%
+    &:hover
+        opacity: 100%
+
+// *
+//     outline: 1px solid red
+
+@font-face
+    font-family: "OpenSans-Regular", 'Times New Roman', Times, serif
+    src: url("/Landings/SIENCEENJOY/fonts/static/OpenSans/OpenSans-Bold.ttf")
+
+body
+    margin: 0
+    padding: 0
+    font-size: $basic_text_font_size
+    font-family: OpenSans-Regular, 'Times New Roman', Times, serif
+
+.bg
+    background-image: url("/Lab11/Images/bg.jpg")
+    min-height: 100vh
+    z-index: 0
+    position: relative
+
+.header
+    height: 75vh
+    width: 100%
+    background-image: url("/Landings/SIENCEENJOY/Images/header.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    z-index: 1
+    .row
+        padding-top: 25px
+        .logo
+            opacity: 60%
+            background-image: url("/Landings/SIENCEENJOY/Images/logo.png")
+            background-repeat: no-repeat
+            width: 194px
+            height: 20px
+            z-index: 2
+            margin-bottom: 20px
+            &:hover
+                opacity: 100%
+                border-bottom: 2px solid $main_color
+                padding-bottom: 30px
+        >nav
+            ol
+                list-style: none
+                position: relative
+                margin: 0
+                padding: 0
+                li
+                    display: inline-block
+                    outline: none
+                    border: none
+                    padding: 0 20px
+                    a
+                        text-decoration: none
+                        font-weight: bold
+                        display: block
+                        color: $main_color
+                        opacity: 60%
+                        &:hover
+                            border-bottom: 2px solid $main_color
+                            padding-bottom: 5px
+                            opacity: 100%
+        .h1
+            position: absolute
+            top: 120px
+            text-align: center
+            width: 715px
+            h1
+                color: white
+                font-size: $basic_text_font_size * 5
+                padding-bottom: 20px
+            p
+                color: $main_color
+                font-size: $basic_text_font_size * 1.5
+            input
+                position: relative
+                top: -2%
+                @include input_button()
+
+@media screen and ( max-width: 768px)
+    .header
+        .row
+            .h1
+                position: relative
+                top: 0
+    
+.main
+    background-color: $main_color
+    .container
+        background-color: #000000
+        margin-top: -8.5%
+        .schema
+            background-image: url("/Landings/SIENCEENJOY/Images/schema.jpg")
+            min-height: $main_section
+            .first_block, .second_block
+                > div
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    text-align: center
+                    padding: 0 50px
+                    > div
+                        padding-bottom: 15px
+                    h3
+                        font-size: $basic_text_font_size * 1.5
+        .galery
+            background-image: url("/Landings/SIENCEENJOY/Images/schema.jpg")
+            min-height: $main_section
+            img
+                width: 420px
+                height: 344px
+                margin-bottom: 10px
+        .workers
+            padding-top: 30px
+            background-image: url("/Landings/SIENCEENJOY/Images/schema.jpg")
+            min-height: $main_section - 200px
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            .first_portrait, .second_portrait, .third_portrait, .fourth_portrait
+                display: flex
+                align-items: center
+                flex-direction: column
+                text-align: center
+                h3
+                    padding-top: 15px
+                    display: flex
+                    align-self: center
+                p
+                    font-size: $basic_text_font_size * 1.8
+                    margin-top: -10px
+                    color: red
+                    font-weight: bold
+                    width: 75%
+                    padding-left: 8px
+                    text-align: left
+                    + p
+                        color: $main_color
+                        font-size: $basic_text_font_size
+                        font-weight: normal
+                        padding-left: 0
+        .download
+            background-image: url("/Landings/SIENCEENJOY/Images/download.jpg")
+            min-height: $main_section - 361px
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+            text-align: center
+            .content
+                display: flex
+                flex-direction: column
+                align-items: center
+                h2
+                    font-size: $basic_text_font_size * 4.5
+
+                p
+                    font-size: $basic_text_font_size * 2
+                    font-weight: 500
+                    padding-bottom: 40px
+                    padding-top: 30px
+                input
+                    @include input_button()
+                    opacity: 80%
+                    background-color: red
+
+.footer
+    background-image: url("/Landings/SIENCEENJOY/Images/footer.jpg")
+    min-height: $main_section - 504
+    color: #6e728c
+    font-weight: bold
+    .location
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    .share
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        colo
+        .images
+            display: flex
+            flex-wrap: wrap
+            width: 120px
+    .about
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        p
+            &:nth-child(2)
+                width: 250px
+                text-align: center
+    .location, .share, .about
+        min-height: $main_section - 450
+        p
+            &:nth-child(1)
+                font-size: $basic_text_font_size * 2
+                color: $main_color
+                text-transform: uppercase

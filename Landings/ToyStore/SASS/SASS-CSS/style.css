@@ -1,6 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round:regular);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+* {
+  outline: 1px solid red;
+}
+
+.container-fluid {
+  outline: 2px solid green;
+}
+
 body {
-  font-family: "Valera Round" "Times New Roman", Times, serif;
+  font-family: "Valera Round", "Times New Roman", Times, serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
 
 .header .row {
@@ -9,27 +21,27 @@ body {
   color: white;
 }
 .header .row .about {
-  margin-left: 200px;
   padding-left: 0;
 }
 .header .row .about div:nth-child(2) {
   margin-left: 55px;
 }
 .header .row .images {
-  margin-right: 200px;
+  padding-right: 7px;
+}
+.header .row .images a {
+  float: right;
+  margin-left: 15px;
 }
 .header .row .images a img {
   height: 20px;
 }
 
+.navigation {
+  background-color: #FFFFFF;
+}
 .navigation .container-fluid {
   padding: 0;
-}
-.navigation .container-fluid > a {
-  margin-left: 200px;
-}
-.navigation .container-fluid .cart {
-  margin-right: 200px;
 }
 .navigation .container-fluid .cart a {
   text-decoration: none;
@@ -47,9 +59,11 @@ body {
 
 .header-bg {
   background: url("/Landings/ToyStore/SRC/baby_bg.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 90.5vh;
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +73,7 @@ body {
   height: 308px;
   background-color: white;
   border-radius: 15px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,8 +96,105 @@ body {
   color: white;
   height: 48px;
   width: 153px;
-  opacity: 100%;
+  opacity: 90%;
 }
 .header-bg .hello input:hover {
+  opacity: 100%;
+}
+
+.toys {
+  height: 460px;
+  background-color: #F8F8F8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toys .stuffed_animals {
+  width: 570px;
+  height: 188px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: #FFC12C;
+  margin-right: 25px;
+  flex-direction: row;
+}
+.toys .stuffed_animals img {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  bottom: 27%;
+}
+.toys .stuffed_animals img {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  bottom: 27%;
+}
+.toys .stuffed_animals .shop-now {
+  position: relative;
+  right: 10%;
+}
+.toys .stuffed_animals .shop-now input {
+  float: left;
+}
+.toys .wooden_toys {
+  width: 570px;
+  height: 188px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: #FB416B;
+  margin-left: 25px;
+  flex-direction: row-reverse;
+}
+.toys .wooden_toys img {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  bottom: 27%;
+}
+.toys .wooden_toys .shop-now {
+  position: relative;
+  left: 10%;
+}
+.toys .wooden_toys .shop-now input {
+  float: right;
+}
+.toys .stuffed_animals,
+.toys .wooden_toys {
+  align-items: center;
+}
+.toys .stuffed_animals .shop-now .p,
+.toys .wooden_toys .shop-now .p {
+  font-family: "Valera Round", "Times New Roman", Times, serif;
+  font-size: 32px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+.toys .stuffed_animals .shop-now input,
+.toys .wooden_toys .shop-now input {
+  height: 40px;
+  width: 112px;
+  color: #111111;
+  font-family: "Open Sans";
+  background-color: #FFFFFF;
+  border: 1px solid #e2e2e2;
+  border-radius: 25px;
+  font-size: 13px;
   opacity: 90%;
+}
+.toys .stuffed_animals .shop-now input:hover,
+.toys .wooden_toys .shop-now input:hover {
+  opacity: 100%;
+}
+.toys .stuffed_animals .shop-now input:focus,
+.toys .wooden_toys .shop-now input:focus {
+  font-weight: 600;
+}
+
+.stuffed_animals_sell .h1 {
+  font-size: 10px;
 }

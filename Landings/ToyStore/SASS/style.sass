@@ -2,14 +2,18 @@ $main-color: #A5C926
 $margin-left-right: 200px
 
 @import url(https://fonts.googleapis.com/css?family=Varela+Round:regular)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic)
 
-// *
-//     outline: 1px solid red
-// .container-fluid
-//     outline: 2px solid green
+*
+    outline: 1px solid red
+.container-fluid
+    outline: 2px solid green
 
 body
-    font-family: 'Valera Round' 'Times New Roman', Times, serif
+    font-family: 'Valera Round', 'Times New Roman', Times, serif
+    font-weight: 400
+    padding: 0
+    margin: 0
 
 .header
     .row
@@ -17,24 +21,23 @@ body
         background-size: contain
         color: white
         .about
-            margin-left: $margin-left-right
             padding-left: 0
             div
                 &:nth-child(2)
                     margin-left: 55px
         .images
-            margin-right: $margin-left-right
+            padding-right: 7px
             a
+                float: right
+                margin-left: 15px
                 img
                     height: 20px
 
 .navigation
+    background-color: #FFFFFF
     .container-fluid
         padding: 0
-        >a
-            margin-left: $margin-left-right
         .cart
-            margin-right: $margin-left-right
             a
                 text-decoration: none
                 img
@@ -48,9 +51,11 @@ body
 
 .header-bg
     background: url('/Landings/ToyStore/SRC/baby_bg.png')
-    background-size: cover
+    background-size: contain
     background-repeat: no-repeat
     height: 90.5vh
+    width: 100%
+    position: relative
     display: flex
     justify-content: center
     align-items: center
@@ -59,18 +64,19 @@ body
         height: 308px
         background-color: white
         border-radius: 15px
+        position: relative
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         >div
-            margin-bottom: 15px 
+            margin-bottom: 15px
             color: $main-color
         .h1
             width: 416px
             text-align: center
             font-size: 39px
-            color: black    
+            color: black
         input
             background-color: $main-color
             border-radius: 25px
@@ -78,7 +84,80 @@ body
             color: white
             height: 48px
             width: 153px
-            opacity: 100%
+            opacity: 90%
             &:hover
-                opacity: 90%
+                opacity: 100%
 
+@mixin block-toys()
+    width: 570px
+    height: 188px
+    border-radius: 15px
+    position: relative
+    display: flex
+    justify-content: space-around
+
+@mixin img-toys()
+    width: 220px
+    height: 220px
+    position: relative
+    bottom: 27%
+
+.toys
+    height: 460px
+    background-color: #F8F8F8
+    display: flex
+    justify-content: center
+    align-items: center
+    .stuffed_animals
+        @include block-toys
+        background-color: #FFC12C
+        margin-right: 25px
+        flex-direction: row
+        img
+            @include img-toys
+        img
+            @include img-toys
+        .shop-now
+            position: relative
+            right: 10%
+            input
+                float: left
+    .wooden_toys
+        @include block-toys
+        background-color: #FB416B
+        margin-left: 25px
+        flex-direction: row-reverse
+        img
+            @include img-toys
+        .shop-now
+            position: relative
+            left: 10%
+            input
+                float: right
+    .stuffed_animals,
+    .wooden_toys
+        align-items: center
+        .shop-now
+            .p
+                font-family: 'Valera Round', 'Times New Roman', Times, serif
+                font-size: 32px
+                color: #FFFFFF
+                margin-bottom: 15px
+            input
+                height: 40px
+                width: 112px
+                color: #111111
+                font-family: 'Open Sans'
+                background-color: #FFFFFF
+                border: 1px solid #e2e2e2 
+                border-radius: 25px
+                font-size: 13px
+                opacity:  90%
+                &:hover
+                    opacity: 100%
+                &:focus
+                    font-weight: 600
+
+.stuffed_animals_sell
+    .h1
+        font-size: 10px

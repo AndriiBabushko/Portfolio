@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "OpenSans-Regular", "Times New Roman", Times, serif;
+  src: url("/Landings/SIENCEENJOY/fonts/static/OpenSans/OpenSans-Bold.ttf");
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: OpenSans-Regular, "Times New Roman", Times, serif;
+}
+
+.bg {
+  background-image: url("/Lab11/Images/bg.jpg");
+  min-height: 100vh;
+  z-index: 0;
+  position: relative;
+}
+
+.header {
+  height: 75vh;
+  width: 100%;
+  background-image: url("/Landings/SIENCEENJOY/Images/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+.header .row {
+  padding-top: 25px;
+}
+.header .row .logo {
+  opacity: 60%;
+  background-image: url("/Landings/SIENCEENJOY/Images/logo.png");
+  background-repeat: no-repeat;
+  width: 194px;
+  height: 20px;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+.header .row .logo:hover {
+  opacity: 100%;
+  border-bottom: 2px solid #bbbcc9;
+  padding-bottom: 30px;
+}
+.header .row > nav ol {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.header .row > nav ol li {
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+}
+.header .row > nav ol li a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  color: #bbbcc9;
+  opacity: 60%;
+}
+.header .row > nav ol li a:hover {
+  border-bottom: 2px solid #bbbcc9;
+  padding-bottom: 5px;
+  opacity: 100%;
+}
+.header .row .h1 {
+  position: absolute;
+  top: 120px;
+  text-align: center;
+  width: 715px;
+}
+.header .row .h1 h1 {
+  color: white;
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+.header .row .h1 p {
+  color: #bbbcc9;
+  font-size: 18px;
+}
+.header .row .h1 input {
+  position: relative;
+  top: -2%;
+  width: 170px;
+  height: 40px;
+  font-size: 15.6px;
+  background-color: #c24040;
+  color: white;
+  border: 0;
+  opacity: 90%;
+}
+.header .row .h1 input:hover {
+  opacity: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header .row .h1 {
+    position: relative;
+    top: 0;
+  }
+}
+.main {
+  background-color: #bbbcc9;
+}
+.main .container {
+  background-color: #000000;
+  margin-top: -8.5%;
+}
+.main .container .schema {
+  background-image: url("/Landings/SIENCEENJOY/Images/schema.jpg");
+  min-height: 700px;
+}
+.main .container .schema .first_block > div, .main .container .schema .second_block > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 50px;
+}
+.main .container .schema .first_block > div > div, .main .container .schema .second_block > div > div {
+  padding-bottom: 15px;
+}
+.main .container .schema .first_block > div h3, .main .container .schema .second_block > div h3 {
+  font-size: 18px;
+}
+.main .container .galery {
+  background-image: url("/Landings/SIENCEENJOY/Images/schema.jpg");
+  min-height: 700px;
+}
+.main .container .galery img {
+  width: 420px;
+  height: 344px;
+  margin-bottom: 10px;
+}
+.main .container .workers {
+  padding-top: 30px;
+  background-image: url("/Landings/SIENCEENJOY/Images/schema.jpg");
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.main .container .workers .first_portrait, .main .container .workers .second_portrait, .main .container .workers .third_portrait, .main .container .workers .fourth_portrait {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.main .container .workers .first_portrait h3, .main .container .workers .second_portrait h3, .main .container .workers .third_portrait h3, .main .container .workers .fourth_portrait h3 {
+  padding-top: 15px;
+  display: flex;
+  align-self: center;
+}
+.main .container .workers .first_portrait p, .main .container .workers .second_portrait p, .main .container .workers .third_portrait p, .main .container .workers .fourth_portrait p {
+  font-size: 21.6px;
+  margin-top: -10px;
+  color: red;
+  font-weight: bold;
+  width: 75%;
+  padding-left: 8px;
+  text-align: left;
+}
+.main .container .workers .first_portrait p + p, .main .container .workers .second_portrait p + p, .main .container .workers .third_portrait p + p, .main .container .workers .fourth_portrait p + p {
+  color: #bbbcc9;
+  font-size: 12px;
+  font-weight: normal;
+  padding-left: 0;
+}
+.main .container .download {
+  background-image: url("/Landings/SIENCEENJOY/Images/download.jpg");
+  min-height: 339px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.main .container .download .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .container .download .content h2 {
+  font-size: 54px;
+}
+.main .container .download .content p {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+.main .container .download .content input {
+  width: 170px;
+  height: 40px;
+  font-size: 15.6px;
+  background-color: #c24040;
+  color: white;
+  border: 0;
+  opacity: 90%;
+  opacity: 80%;
+  background-color: red;
+}
+.main .container .download .content input:hover {
+  opacity: 100%;
+}
+
+.footer {
+  background-image: url("/Landings/SIENCEENJOY/Images/footer.jpg");
+  min-height: 196px;
+  color: #6e728c;
+  font-weight: bold;
+}
+.footer .location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer .share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer .share .images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120px;
+}
+.footer .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .about p:nth-child(2) {
+  width: 250px;
+  text-align: center;
+}
+.footer .location, .footer .share, .footer .about {
+  min-height: 250px;
+}
+.footer .location p:nth-child(1), .footer .share p:nth-child(1), .footer .about p:nth-child(1) {
+  font-size: 24px;
+  color: #bbbcc9;
+  text-transform: uppercase;
+}
